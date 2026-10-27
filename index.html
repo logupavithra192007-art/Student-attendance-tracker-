@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Attendance Tracker</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="container">
+  <header><h1>Student Attendance Tracker</h1><p>Manage student attendance by date</p></header>
+  <section class="card">
+    <h2>Add Student</h2>
+    <form id="studentForm">
+      <label for="studentName">Student name</label>
+      <input id="studentName" type="text" maxlength="80" placeholder="Enter student name" required>
+      <button type="submit">Add Student</button>
+    </form>
+  </section>
+  <section class="card">
+    <div class="heading-row">
+      <h2>Attendance Register</h2>
+      <label for="attendanceDate">Attendance date <input id="attendanceDate" type="date" required></label>
+    </div>
+    <p id="emptyMessage">Add a student to begin.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Student Name</th><th>Attendance</th><th>Action</th></tr></thead>
+        <tbody id="studentRows"></tbody>
+      </table>
+    </div>
+    <div class="summary">
+      <span>Total: <strong id="totalCount">0</strong></span>
+      <span>Present: <strong id="presentCount">0</strong></span>
+      <span>Absent: <strong id="absentCount">0</strong></span>
+      <span>Attendance: <strong id="percentage">0%</strong></span>
+    </div>
+    <button id="clearButton" class="secondary" type="button">Clear All Students</button>
+    <p class="note">Attendance is saved in this browser on this device. Select a date to view or update that day's records.</p>
+  </section>
+  <footer>Student Attendance Tracker • HTML, CSS and JavaScript</footer>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
